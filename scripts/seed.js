@@ -3,7 +3,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const mime = require('mime-types');
-const { categories, authors, articles, global, about } = require('../data/data.json');
+const { categories, authors, articles, global, about, products, pages, leadFormSubmissions } = require('../data/data.json');
 
 async function seedExampleApp() {
   const shouldImportSeedData = await isFirstRun();
@@ -31,8 +31,9 @@ async function isFirstRun() {
     name: 'setup',
   });
   const initHasRun = await pluginStore.get({ key: 'initHasRun' });
-  await pluginStore.set({ key: 'initHasRun', value: true });
-  return !initHasRun;
+  // Reset initHasRun to allow corporate data import
+  await pluginStore.set({ key: 'initHasRun', value: false });
+  return true;
 }
 
 async function setPublicPermissions(newPermissions) {
@@ -100,10 +101,23 @@ async function uploadFile(file, name) {
 // Create an entry and attach files if there are any
 async function createEntry({ model, entry }) {
   try {
+    // Check if entry already exists by slug
+    if (entry.slug) {
+      const existing = await strapi.documents(`api::${model}.${model}`).findFirst({
+        filters: { slug: entry.slug }
+      });
+      if (existing) {
+        console.log(`${model} with slug "${entry.slug}" already exists, skipping...`);
+        return existing;
+      }
+    }
+    
     // Actually create the entry in Strapi
-    await strapi.documents(`api::${model}.${model}`).create({
+    const created = await strapi.documents(`api::${model}.${model}`).create({
       data: entry,
     });
+    console.log(`Created ${model}: ${entry.title || entry.name || entry.slug}`);
+    return created;
   } catch (error) {
     console.error({ model, entry, error });
   }
@@ -236,6 +250,38 @@ async function importAuthors() {
   }
 }
 
+async function importProducts() {
+  for (const product of products) {
+    const image = product.image ? await checkFileExistsBeforeUpload([product.image]) : null;
+
+    await createEntry({
+      model: 'product',
+      entry: {
+        ...product,
+        image,
+      },
+    });
+  }
+}
+
+async function importPages() {
+  for (const page of pages) {
+    await createEntry({
+      model: 'page',
+      entry: page,
+    });
+  }
+}
+
+async function importLeadFormSubmissions() {
+  for (const submission of leadFormSubmissions) {
+    await createEntry({
+      model: 'lead-form-submission',
+      entry: submission,
+    });
+  }
+}
+
 async function importSeedData() {
   // Allow read of application content types
   await setPublicPermissions({
@@ -244,12 +290,18 @@ async function importSeedData() {
     author: ['find', 'findOne'],
     global: ['find', 'findOne'],
     about: ['find', 'findOne'],
+    product: ['find', 'findOne'],
+    page: ['find', 'findOne'],
+    'lead-form-submission': ['create'],
   });
 
   // Create all entries
   await importCategories();
   await importAuthors();
+  await importProducts();
   await importArticles();
+  await importPages();
+  await importLeadFormSubmissions();
   await importGlobal();
   await importAbout();
 }

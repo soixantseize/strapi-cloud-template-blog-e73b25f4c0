@@ -29,24 +29,34 @@
   },
   "categories": [
     {
-      "name": "news",
-      "slug": "news"
+      "name": "Back",
+      "slug": "back",
+      "description": "Backend technologies and tools"
     },
     {
-      "name": "tech",
-      "slug": "tech"
+      "name": "Front",
+      "slug": "front",
+      "description": "Frontend frameworks and libraries"
     },
     {
-      "name": "food",
-      "slug": "food"
+      "name": "SSG",
+      "slug": "ssg",
+      "description": "Static site generators"
     },
     {
-      "name": "nature",
-      "slug": "nature"
+      "name": "Container",
+      "slug": "container",
+      "description": "Containerization and orchestration"
     },
     {
-      "name": "story",
-      "slug": "story"
+      "name": "Database",
+      "slug": "database",
+      "description": "Database systems and technologies"
+    },
+    {
+      "name": "Other",
+      "slug": "other",
+      "description": "Other development tools and technologies"
     }
   ],
   "authors": [
@@ -65,9 +75,6 @@
     {
       "title": "The internet's Own boy",
       "slug": "the-internet-s-own-boy",
-      "category": {
-        "id": 5
-      },
       "author": {
         "id": 1
       },
@@ -100,9 +107,6 @@
     {
       "title": "This shrimp is awesome",
       "slug": "this-shrimp-is-awesome",
-      "category": {
-        "id": 4
-      },
       "author": {
         "id": 1
       },
@@ -135,11 +139,8 @@
     {
       "title": "A bug is becoming a meme on the internet",
       "slug": "a-bug-is-becoming-a-meme-on-the-internet",
-      "category": {
-        "id": 2
-      },
       "author": {
-        "id": 2
+        "id": 1
       },
       "description": "How a bug on MySQL is becoming a meme on the internet",
       "cover": null,
@@ -170,11 +171,8 @@
     {
       "title": "Beautiful picture",
       "slug": "beautiful-picture",
-      "category": {
-        "id": 4
-      },
       "author": {
-        "id": 2
+        "id": 1
       },
       "description": "Description of a beautiful picture",
       "cover": null,
@@ -209,7 +207,7 @@
         "id": 1
       },
       "author": {
-        "id": 2
+        "id": 1
       },
       "description": "Maybe the answer is in this article, or not...",
       "cover": null,
@@ -236,6 +234,259 @@
           "files": ["coffee-art.jpg", "coffee-beans.jpg"]
         }
       ]
+    },
+    {
+      "title": "This shrimp is awesome",
+      "slug": "this-shrimp-is-awesome",
+      "author": {
+        "id": 1
+      },
+      "description": "Mantis shrimps, or stomatopods, are marine crustaceans of the order Stomatopoda.",
+      "cover": null,
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Thelonius Monk",
+          "body": "You've got to dig it to dig it, you dig?"
+        },
+        {
+          "__component": "shared.media",
+          "file": "coffee-art.jpg"
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+        },
+        {
+          "__component": "shared.slider",
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+        }
+      ]
+    },
+    {
+      "title": "A bug is becoming a meme on the internet",
+      "slug": "a-bug-is-becoming-a-meme-on-the-internet",
+      "author": {
+        "id": 1
+      },
+      "description": "How a bug on MySQL is becoming a meme on the internet",
+      "cover": null,
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Thelonius Monk",
+          "body": "You've got to dig it to dig it, you dig?"
+        },
+        {
+          "__component": "shared.media",
+          "file": "coffee-art.jpg"
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+        },
+        {
+          "__component": "shared.slider",
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+        }
+      ]
+    },
+    {
+      "title": "Beautiful picture",
+      "slug": "beautiful-picture",
+      "author": {
+        "id": 1
+      },
+      "description": "Description of a beautiful picture",
+      "cover": null,
+      "blocks": [
+        {
+          "__component": "shared.rich-text",
+          "body": "## Probant \n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. \n\n## Abit sua\n\nse Lorem markdownum negat. Argo *saxa* videnda cornuaque hunc qui tanta spes teneas! Obliquis est dicenti est salutat ille tamen iuvenum nostrae dolore. - Colores nocituraque comitata eripiunt - Addit quodcunque solum cui et dextram illis - Nulli meus nec extemplo ille ferebat pressit Se blandita fulvae vox gravem Pittheus cesserunt sanguine herbis tu comitum tenuit. Sui in ruunt; Doridaque maculosae fuissem! Et loqui. "
+        },
+        {
+          "__component": "shared.quote",
+          "title": "Thelonius Monk",
+          "body": "You've got to dig it to dig it, you dig?"
+        },
+        {
+          "__component": "shared.media",
+          "file": "coffee-art.jpg"
+        },
+        {
+          "__component": "shared.rich-text",
+          "body": "## Spatiantia astra \n\nFoeda, medio silva *errandum*: onus formam munere. Mutata bibulis est auxiliare arces etiamnunc verbis virgineo Priamidas illa Thescelus, nam fit locis lucis auras. Exitus hospes gratulor ut pondere [speslimite](http://www.curas.io/figuram); quid habent, Avernales faciente de. Pervenit Ino sonabile supplex cognoscenti vires, Bacchumque errat miserarum venandi dignabere dedisti. Discrimina iuncosaque virgaque tot sine superest [fissus](http://quos.org/sitet.aspx). Non color esset potest non sumit, sed vix arserat. Nisi immo silva tantum pectusque quos pennis quisquam artus!"
+        },
+        {
+          "__component": "shared.slider",
+          "files": ["coffee-art.jpg", "coffee-beans.jpg"]
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "title": "Gatsby",
+      "description": "Blazing fast modern site generator for React. Go beyond static sites: build blogs, e-commerce sites, full-blown apps, and more with Gatsby.",
+      "price": 1.84,
+      "slug": "gatsby",
+      "status": "published",
+      "Custom_field": [
+        {
+          "title": "Select the size of your sticker",
+          "required": true,
+          "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+        }
+      ],
+      "image": "gatsby.png",
+      "categories": [{ "id": 3 }]
+    },
+    {
+      "title": "Nuxt.js",
+      "description": "The Intuitive Vue Framework",
+      "price": 1.84,
+      "slug": "nuxt-js",
+      "status": "published",
+      "Custom_field": [
+        {
+          "title": "Select the size of your sticker",
+          "required": true,
+          "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+        }
+      ],
+      "image": "nuxt-js.png",
+      "categories": [{ "id": 3 }, { "id": 2 }]
+    },
+    {
+      "title": "Vue.js",
+      "description": "The Progressive JavaScript Framework.",
+      "price": 1.84,
+      "slug": "vue-js",
+      "status": "published",
+      "Custom_field": [
+        {
+          "title": "Select the size of your sticker",
+          "required": true,
+          "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+        }
+      ],
+      "image": "vue-js.png",
+      "categories": [{ "id": 2 }]
+    },
+    {
+      "title": "React",
+      "description": "A JavaScript library for building user interfaces",
+      "price": 1.84,
+      "slug": "react",
+      "status": "published",
+      "Custom_field": [
+        {
+          "title": "Select the size of your sticker",
+          "required": true,
+          "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+        }
+      ],
+      "image": "react.png",
+      "categories": [{ "id": 2 }]
+    },
+    {
+      "title": "Next.js",
+      "description": "The React Framework",
+      "price": 1.84,
+      "slug": "next-js",
+      "status": "published",
+      "Custom_field": [
+        {
+          "title": "Select the size of your sticker",
+          "required": true,
+          "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+        }
+      ],
+      "image": "next-js.png",
+      "categories": [{ "id": 3 }, { "id": 2 }]
+    },
+    {
+      "title": "Strapi",
+      "description": "Design APIs fast, manage content easily.",
+      "price": 1.84,
+      "slug": "strapi",
+      "status": "published",
+      "Custom_field": [
+        {
+          "title": "Select the size of your sticker",
+          "required": true,
+          "options": "Small[+0.00]|Medium[+0.40]|Large[+0.80]"
+        }
+      ],
+      "image": "strapi.png",
+      "categories": [{ "id": 1 }]
+    }
+  ],
+  "pages": [
+    {
+      "slug": "",
+      "locale": "en",
+      "shortName": "Home",
+      "metadata": {
+        "metaTitle": "Corporate Site with Ecommerce",
+        "metaDescription": "A comprehensive business website with product catalog",
+        "twitterCardType": "summary",
+        "twitterUsername": null,
+        "shareImage": null
+      },
+      "contentSections": [
+        {
+          "__component": "sections.hero",
+          "title": "Your Business, Elevated",
+          "label": "Corporate + Ecommerce Template",
+          "description": "A complete business website with product catalog, blog, and lead generation.",
+          "smallTextWithLink": "Powered by Strapi CMS",
+          "buttons": [
+            {
+              "url": "/products",
+              "newTab": false,
+              "text": "View Products",
+              "type": "primary"
+            },
+            {
+              "url": "/articles",
+              "newTab": false,
+              "text": "Read Blog",
+              "type": "secondary"
+            }
+          ],
+          "picture": null
+        },
+        {
+          "__component": "sections.rich-text",
+          "content": "## Welcome to Our Platform\n\nDiscover our comprehensive solution that combines corporate presence with powerful ecommerce capabilities. From showcasing your products to sharing insights through our blog, we provide everything you need to grow your business online."
+        }
+      ]
+    }
+  ],
+  "leadFormSubmissions": [
+    {
+      "email": "contact@example.com",
+      "status": "seen",
+      "location": "Home Page Bottom"
+    },
+    {
+      "email": "sales@demo.com",
+      "status": "contacted",
+      "location": "Home Page Hero"
+    },
+    {
+      "email": "info@testsite.com",
+      "status": "ignored",
+      "location": "Contact Form"
     }
   ]
 }
